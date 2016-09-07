@@ -1,0 +1,27 @@
+# to show all the names of the files committed in this commit
+git show  --name-only <commit-id>
+
+# to list the last 5 logs of a specific file
+git log -5 --follow <file-path>
+
+# to checkout a specific commit of a specific file
+git checkout <commit-id> -- <file-path>
+
+# reset a file from staged to work area
+git reset HEAD <file-path>
+
+# to show differences of a staged file
+git diff --cached <file-path>
+
+# to show differences of a file within an old and new commits
+git diff <old-commit-id> <new-commit-id> <file-path>
+
+# to stash modified files except the staged
+git stash save --keep-index
+
+# to add a file based on individual changes in that file, interactive mode
+git add --patch <file-path>
+
+
+
+
