@@ -23,5 +23,3 @@ git stash save --keep-index
 git add --patch <file-path>
 
 
-
-
