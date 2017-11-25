@@ -9,17 +9,17 @@ $ docker pull alpine
 
 $ docker run alpine ls -l
 
-// view all docker containers 
+// view all docker containers
 
 $ docker ps -a
 
 // view all docker containers currently running
 
 $ docker ps
->>
+
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS               NAMES
 55bb9c2b8530        dockersamples/static-site   "/bin/sh -c 'cd /u..."   2 minutes ago       Up 2 minutes        80/tcp, 443/tcp     vigorous_swirles
-<<
+
 
 // how to execute 'echo "hello from alpine"' command
 
@@ -55,7 +55,3 @@ ex: docker start vigorous_swirles
 
 $ docker rm <<container_name>>
 ex: $ docker rm vigorous_swirles
-
-
-
-
