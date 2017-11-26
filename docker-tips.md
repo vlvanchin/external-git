@@ -97,7 +97,7 @@ Steps:
 
 2. // create a 'Dockerfile' that defines all the configuratios for the necessary environment for
    // the docker container.
-   {```
+   ```
      # base image
      FROM java:8
 
@@ -112,7 +112,7 @@ Steps:
 
      # the first command to execute when the container is launched
      ENTRYPOINT ["java", "-jar", "simpleapp-0.1-SNAPSHOT.jar"]
-   ```}
+   ```
 
 3. // build the image 'simpleapp:latest'
 $ docker build -t simpleapp:latest .
