@@ -117,6 +117,7 @@ Steps:
 3. // build the image 'simpleapp:latest'
 $ docker build -t simpleapp:latest .
 
+
 Run the created image as a container:
 $ docker run <<image_name>>
 ex: $ docker run simpleapp:latest
@@ -125,19 +126,23 @@ Push your image to DockerHub
 Step 1: 
 // Login to DockerHub, enter the following command and provide
 // the necessary credentials
+
 $ docker login
 
 Step 2:
 // tag the image
+
 $ docker tag <<image_name>> <<userid/repo_name>>
 ex: $ docker tag simpleapp vlvanchin/general
 
 step 3:
 // Push the image
+
 $ docker push <<tag_image>>
 ex: $ docker push vlvanchin/general
 
 Run the push image:
 // command to pull and run the image as a container
+
 $ docker run <<userid/repo_name>>
 ex: $ docker run vlvanchin/general
