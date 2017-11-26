@@ -56,3 +56,88 @@ ex: docker start vigorous_swirles
 
 $ docker rm <<container_name>>
 ex: $ docker rm vigorous_swirles
+
+// To run a named container in detached mode and passing environment variable for 'AUTHOR' and accessed through default ports.
+$ docker run --name "static-site" -d -P -e AUTHOR="Susila" dockersamples/static-site
+
+// to see in which ports the container is using
+$ docker port <<container_name>>
+ex: $ docker port static-site
+
+// to make a container run in specific ports: host uses 8888, continer uses 80
+// goto browser and enter with localhost --> http://localhost:8888
+// if container's IP is 172.17.0.3 , then in browser --> http://172.17.0.3:80
+// this will display the site.
+$ docker run --name "site-2" -d -p 8888:80 -e AUTHOR="bagsub" dockersamples/static-site
+
+// to force remove : stop and remove the container
+$ docker rm -f <<container_name>>
+ex: docker rm -f site-2
+
+// to list all docker images found locally
+$ docker images
+
+// to list all docker images that starts with 'v' character
+$ docker images v*
+
+// to pull an image Ubuntu with a tag version 12.04
+// if tag version not specified then 'latest' tag value is used
+$ docker pull ubuntu:12.04
+
+// to search a python container, both locally and remote
+// you will have details about all the containers available
+$ docker search python
+
+// creating your container image:
+Steps:
+
+1. // create an simple Maven Hello world application jar, ex: "simpleapp-0.1-SNAPSHOT.jar".
+   // This jar is an executable one.
+   // put this jar in an aribitary folder: docker-creation
+
+2. // create a 'Dockerfile' that defines all the configuratios for the necessary environment for
+   // the docker container.
+   {```
+     # base image
+     FROM java:8
+
+     # define our tmp volume
+     VOLUME /tmp
+
+     # adds our jar to the root folder
+     ADD simpleapp-0.1-SNAPSHOT.jar .
+
+     # define our CLASSPATH in environment
+     ENV CLASSPATH=.:simpleapp-0.1-SNAPSHOT.jar
+
+     # the first command to execute when the container is launched
+     ENTRYPOINT ["java", "-jar", "simpleapp-0.1-SNAPSHOT.jar"]
+   ```}
+
+3. // build the image 'simpleapp:latest'
+$ docker build -t simpleapp:latest .
+
+Run the created image as a container:
+$ docker run <<image_name>>
+ex: $ docker run simpleapp:latest
+
+Push your image to DockerHub
+Step 1: 
+// Login to DockerHub, enter the following command and provide
+// the necessary credentials
+$ docker login
+
+Step 2:
+// tag the image
+$ docker tag <<image_name>> <<userid/repo_name>>
+ex: $ docker tag simpleapp vlvanchin/general
+
+step 3:
+// Push the image
+$ docker push <<tag_image>>
+ex: $ docker push vlvanchin/general
+
+Run the push image:
+// command to pull and run the image as a container
+$ docker run <<userid/repo_name>>
+ex: $ docker run vlvanchin/general
