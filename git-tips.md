@@ -18,13 +18,14 @@ $ git push --delete <<remote>> <<branch-name>>
 
 # Cherry-pick commits:
 
+```
 * find the common parent as the inital state
 * $ git checkout -b <<cherry-pick-branch-name>> <<initial-commit-id>> // create a new branch for cherry-pick
 * $ git cherry-pick <<commit-id-wanted>> // select the commit that you want
 * Fix any conflicts that arrise 
 ** $ git cherry-pick --continue // to proceed on cherry-pick
 * git push <<remote>> <<cherry-pick-branch-name>>
-
+```
 
 # Other useful commands:
 
@@ -67,9 +68,13 @@ $ git add --patch <file-path>
 
 
 
-How to reset last commit in local and remote:
-1. reset head softly locally first
+## How to reset last commit in local and remote:
+
+```
+* reset head softly locally first
 $ git reset HEAD~1
-2. push forcefully to remote repo
+
+* push forcefully to remote repo
 $ git push <<remote>> <<branch>> -f
+```
 
