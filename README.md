@@ -4,7 +4,7 @@ Great that you have visited this page. Here I have created few pages that bring 
 
 * [Git-tips](git-tips "Git") Some useful tips on GIT 
 * [Docker-tips](docker-tips "Docker") Some useful tips on Docker
-* [Docker-swamp](doker-swamp "Docker Swamp") fundamentals to Docker Swamp
+* [Docker-swarm](doker-swarm "Docker Swarm") fundamentals to Docker Swarm
 * [Shell-tips](shell-tips "Shell") Some commands that might be useful on Shell commands
 * [Webservice-tips](webservice-tips "WS") 
 
