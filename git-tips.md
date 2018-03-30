@@ -83,3 +83,27 @@ $ git reset HEAD~1
 * push forcefully to remote repo
 $ git push <<remote>> <<branch>> -f
 ```
+
+## How to list all different commits between two Branches in a Repo
+
+```
+# To list right-only branch commits that are not in the develop (left branch)
+$ git log --cherry-pick --right-only --no-merges develop...master 
+
+# To list left-only branch commits that are not in the master (right branch)
+$ git log --cherry-pick --left-only --no-merges develop...master
+```
+
+## How to merge a Tag in a branch to another branch
+
+```
+# change dir to the destination branch
+$ git checkout <<destination_branch>>
+
+# fetch the tags from the remote
+$ git fetch --tags origin
+
+# do merge tag
+$ git merge <<tag_name>>
+```
+
