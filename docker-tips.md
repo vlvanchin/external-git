@@ -121,74 +121,9 @@ $ docker pull ubuntu:12.04
 $ docker search python
 ```
 
-### creating your container image:
+### How to Create, Push and Run your own Image as a container?
 
-Steps:
-
-1. // create an simple Maven Hello world application jar, ex: "simpleapp-0.1-SNAPSHOT.jar".
-   // This jar is an executable one.
-   // put this jar in an aribitary folder: docker-creation
-
-2. // create a 'Dockerfile' that defines all the configuratios for the necessary environment for
-   // the docker container.
-   ```
-     # base image
-     FROM java:8
-
-     # define our tmp volume
-     VOLUME /tmp
-
-     # adds our jar to the root folder
-     ADD simpleapp-0.1-SNAPSHOT.jar .
-
-     # define our CLASSPATH in environment
-     ENV CLASSPATH=.:simpleapp-0.1-SNAPSHOT.jar
-
-     # the first command to execute when the container is launched
-     ENTRYPOINT ["java", "-jar", "simpleapp-0.1-SNAPSHOT.jar"]
-   ```
-
-3. // build the image 'simpleapp:latest'
-```
-$ docker build -t simpleapp:latest .
-```
-
-### Run the created image as a container:
-```
-$ docker run <<image_name>>
-ex: $ docker run simpleapp:latest
-```
-
-### Push your image to DockerHub
-
-Step 1:
-// Login to DockerHub, enter the following command and provide
-// the necessary credentials
-```
-$ docker login
-```
-
-Step 2:
-// tag the image
-```
-$ docker tag <<image_name>> <<userid/repo_name>>
-ex: $ docker tag simpleapp vlvanchin/general
-```
-
-step 3:
-// Push the image
-```
-$ docker push <<tag_image>>
-ex: $ docker push vlvanchin/general
-```
-
-### Run the push image:
-
-// command to pull and run the image as a container
-```
-$ docker run <<userid/repo_name>>
-ex: $ docker run vlvanchin/general
-```
+Please refer to the link https://vanchin.blogspot.sg/2018/03/how-to-create-push-and-run-your-own.html
 
 ### How to run a specific command in the docker container?
 
