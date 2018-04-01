@@ -93,18 +93,20 @@ $ docker run --name "site-2" -d -p 8888:80 -e AUTHOR="bagsub" dockersamples/stat
 // to force remove : stop and remove the container
 ```
 $ docker rm -f <<container_name>>
+
 ex: docker rm -f site-2
 ```
 
 // to list all docker images found locally
+
 ```
 $ docker images
 ```
 
 // to list all docker images that starts with 'v' character
+
 ```
-$ docker images v*
-```
+$ docker images "v*"
 
 // to pull an image Ubuntu with a tag version 12.04
 // if tag version not specified then 'latest' tag value is used
@@ -186,4 +188,13 @@ ex: $ docker push vlvanchin/general
 $ docker run <<userid/repo_name>>
 ex: $ docker run vlvanchin/general
 ```
+
+### How to run a specific command in the docker container?
+
+This command shows how to override the entry point defined in the image. This command would override the default entry point configured in the Dockerfile with "bin/ls" and the parameters to this command follows after the image name. 
+
+```
+$ docker run --entrypoint /bin/ls  vlvanchin/general -ls /
+```
+
 
