@@ -107,6 +107,7 @@ $ docker images
 
 ```
 $ docker images "v*"
+```
 
 // to pull an image Ubuntu with a tag version 12.04
 // if tag version not specified then 'latest' tag value is used
