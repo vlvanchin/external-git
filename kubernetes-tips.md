@@ -17,10 +17,10 @@ Selfhelp page to test and learn about Kubernetes.
 
 the output would be as follows:
 
-{info}
+```
 Client Version: version.Info{Major:"1", Minor:"11", GitVersion:"v1.11.0", GitCommit:"91e7b4fd3c980becec37ceefe", GitTreeState:"clean", BuildDate:"2018-06-27T20:17:28Z", GoVersion:"go1.10.2", Compiler:"gc", Platform:"linux/amd64"}
 The connection to the server localhost:8080 was refused - did you specify the right host or port?
-{info}
+```
 
 If your output is like above then it means that there is no cluster up and running. To fix this problem., install MiniKube. Please follow the next steps
 
