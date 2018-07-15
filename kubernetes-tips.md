@@ -5,14 +5,14 @@ Selfhelp page to test and learn about Kubernetes.
 
 # Install *kubectl* that CLI to access and control cluster.
 - On Ubuntu
-{code}
+'''
  $ sudo snap install kubectl --classic
-{code}
+'''
 
 ## To test *kubectl* try the following
-{code}
+'''
  $ kubectl version
-{code}
+'''
 
 the output would be as follows:
 
@@ -28,34 +28,34 @@ If your output is like above then it means that there is no cluster up and runni
 https://github.com/kubernetes/minikube
 
 - to get the latest of the MiniKube binary
-{code}
+'''
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-{code}
+'''
 
 - to put minikube as executable
-{code}
+'''
 $ chmod +x minikube
-{code}
+'''
 
 - to put *minikube* in your path
-{code}
+'''
 $ sudo mv minikube /usr/local/bin/
-{code}
+'''
 
 # Is MiniKube installed?
 - To test if minikube is install and running
-{code}
+'''
 $ minikube Version
-{code}
+'''
 
 * Still you would not be able to have the *kubectl version* working, as the cluster is not up yet.
 
 # How to start Minikube cluster?
 - To start a cluster through the *minikube* we need to have KVM or VM installed. But if we want to run the cluster without any vm-driver for testing purpose, we can do as follows.
 
-{code}
+'''
 $ minikube start --vm-driver=none
-{code}
+'''
 -- if the above command throws any permission error then try the above code in *sudo*
 
 '''
@@ -85,6 +85,6 @@ Server Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.0", GitCom
 
 # How to stop the cluster?
 - Run the following command
-{code}
+'''
 $ sudo minikube stop
-{code}
+'''
