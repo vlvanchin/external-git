@@ -8,4 +8,4 @@ Great that you have visited this page. Here I have created few pages that bring 
 * [Shell-tips](shell-tips "Shell") Some commands that might be useful on Shell commands
 * [Webservice-tips](webservice-tips "WS") 
 * [Execute Jars](java-tips "Java") Some tips on Java side
-
+* [Kubernetes](kubernetes-tips "Kubernetes") Some tips on Kubernetes and Minikube.
