@@ -9,3 +9,4 @@ Great that you have visited this page. Here I have created few pages that bring 
 * [Webservice-tips](webservice-tips "WS") 
 * [Execute Jars](java-tips "Java") Some tips on Java side
 * [Kubernetes](kubernetes-tips "Kubernetes") Some tips on Kubernetes and Minikube.
+* [Use Case - How To?](faq "HowTo") Tackel some real world issues :)
