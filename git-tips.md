@@ -107,3 +107,21 @@ $ git fetch --tags origin
 $ git merge <<tag_name>>
 ```
 
+## How to get log based on filters
+
+```
+// fetch commits based on commit messages
+git log --all --oneline --decorate --grep "message"
+
+// fetch commits based on author and commit message
+git log --oneline --author="authorName" --grep "messageStr"
+
+// to display all the files for a specific commit id
+git show --name-only f2c06ff6
+
+// to display the commit contents of a file on a specific commit
+git show -p <commit-id> -- <filename>
+
+// to display all commit ids along with author name
+git log --format='%H %an'
+```
