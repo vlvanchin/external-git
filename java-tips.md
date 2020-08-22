@@ -85,5 +85,5 @@ $ java -jar showproperties.jar
 
 ```
 
-[Back to Homepage](../)
+[Back to Homepage](../tips-repo)
 
