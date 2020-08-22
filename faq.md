@@ -40,5 +40,4 @@ Once all cherry-picks are done, then push the origin/commonCommitBranch and then
 $ git push origin commonCommitBranch
 ```
 
-
-
+[Back to Homepage](../tips-repo)

@@ -89,3 +89,5 @@ Server Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.0", GitCom
 ```
 $ sudo minikube stop
 ```
+
+[Back to Homepage](../tips-repo)

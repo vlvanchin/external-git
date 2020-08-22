@@ -12,3 +12,5 @@ $ mongo
 ```
 $ sudo mongod --shutdown
 ```
+
+[Back to Homepage](../tips-repo)

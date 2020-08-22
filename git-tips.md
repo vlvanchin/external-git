@@ -125,3 +125,6 @@ git show -p <commit-id> -- <filename>
 // to display all commit ids along with author name
 git log --format='%H %an'
 ```
+
+[Back to Homepage](../tips-repo)
+

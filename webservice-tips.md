@@ -17,3 +17,5 @@ C:\dev\ides\eclipse\workspace\FileAttachmentExample>wsgen -d bin -s bin -wsdl -c
 ```
 wsimport -keep -p net.codejava.ws.binary.client http://localhost:9898/codejava/fileService?wsdl
 ```
+
+[Back to Homepage](../tips-repo)

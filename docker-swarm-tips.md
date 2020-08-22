@@ -53,3 +53,4 @@ $ docker stack rm <<stack_name>>
 ex: $ docker stack rm vote
 ```
 
+[Back to Homepage](../tips-repo)
